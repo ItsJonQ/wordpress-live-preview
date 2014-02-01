@@ -6,6 +6,7 @@ define([
     'use strict';
 
     var eventClickNavigation;
+
     // Fn: Click navigation for the modal's arrows
     eventClickNavigation = function() {
         var header = modal.Data.els;

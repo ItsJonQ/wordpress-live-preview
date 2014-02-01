@@ -3,6 +3,7 @@ define(['modules/modal/modal'], function(modal) {
     'use strict';
 
     var eventUpdateEditLink;
+
     // Fn: Updating the "Edit" link of the preview modal
     eventUpdateEditLink = function(model) {
 

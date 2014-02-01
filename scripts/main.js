@@ -1,5 +1,7 @@
 (function($) {
 
+    'use strict';
+
     // Defining the config for RequireJS
     var requireConfigInit = function() {
         require.config({

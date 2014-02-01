@@ -18,14 +18,11 @@ define(function(require, exports, module) {
     // Defining the events
     var eventSetup = require('modules/events/setup');
 
-
     // Fn: Init method for post Preview module
     var init = function() {
 
-        // Return false if the page is not a post-edit page
-        if(window.pagenow !== undefined && window.pagenow.indexOf('edit-') === -1) {
-            return false;
-        }
+        // Return false if post isn't post page
+        if(!Api.check.postList() && !Api.check.postEdit()) { return false; }
 
         // Init model setup
         modelSetup();

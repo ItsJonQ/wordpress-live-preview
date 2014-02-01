@@ -1,5 +1,7 @@
 define(['modules/modal/modal'], function(modal) {
+
     'use strict';
+
     var eventKeypress;
 
     // Event: Keyboard left/right navigation

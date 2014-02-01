@@ -5,8 +5,9 @@ define([
 
     'use strict';
 
-    // Event: Creating the post preview click action
     var eventClick;
+
+    // Event: Creating the post preview click action
     eventClick = function() {
         // Looping through each model
         eachModel(function(model, i){

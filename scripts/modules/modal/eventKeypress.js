@@ -1,4 +1,7 @@
-define(['modules/modal/modal'], function(modal) {
+define([
+    'modules/modal/modal',
+    'modules/modal/eventNavigation'
+    ], function(modal, eventNavigation) {
 
     'use strict';
 

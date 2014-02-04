@@ -1,0 +1,30 @@
+{
+  "name": "Live Preview - Wordpress Plugin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ItsJonQ/wordpress-live-preview.git"
+  },
+  "author": "Q",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItsJonQ/wordpress-live-preview/issues"
+  },
+  "homepage": "https://github.com/ItsJonQ/wordpress-live-preview",
+  "devDependencies": {
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.6.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.5",
+    "grunt-contrib-requirejs": "~0.4.1",
+    "grunt-contrib": "~0.8.0"
+  }
+}

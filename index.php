@@ -108,6 +108,11 @@ function get_post_preview() {
                     'date' => get_the_time('M j, Y'),
                     'time' => get_the_time(),
                 ),
+                // All in One SEO information
+                'seo' => array(
+                    'title' => get_post_meta( $entry_id, '_aioseop_title', true ) ? get_post_meta( $entry_id, '_aioseop_title', true ) : false,
+                    'description' => get_post_meta( $entry_id, '_aioseop_description', true ) ? get_post_meta( $entry_id, '_aioseop_description', true ) : false
+                ),
                 'slug' => $post->post_name,
                 'title' => get_the_title($entry_id),
                 'thumbnail' => array(

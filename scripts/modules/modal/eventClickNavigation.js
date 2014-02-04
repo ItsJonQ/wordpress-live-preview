@@ -1,7 +1,8 @@
 define([
+    'api',
     'modules/modal/modal',
     'modules/modal/eventNavigation'
-    ], function(modal, navigation) {
+    ], function(Api, modal, navigation) {
 
     'use strict';
 
@@ -13,18 +14,36 @@ define([
 
         if(!header) { return false; }
 
+        var edit = header.edit;
         var previous = header.previous;
         var next = header.next;
 
-        previous.addEventListener('click', function(e) {
-            e.preventDefault();
-            navigation('previous');
-        }, false);
+        // Setup click handlers if the page is the post list
+        if(Api.check.postList()) {
 
-        next.addEventListener('click', function(e) {
-            e.preventDefault();
-            navigation('next');
-        }, false);
+            previous.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigation('previous');
+            }, false);
+
+            next.addEventListener('click', function(e) {
+                e.preventDefault();
+                navigation('next');
+            }, false);
+
+        } else {
+
+            // Remove the click handlers if the page is an edit page
+            if(Api.check.postEdit()) {
+
+                previous.parentNode.removeChild(previous);
+                next.parentNode.removeChild(next);
+                edit.parentNode.removeChild(edit);
+
+            }
+
+        }
+
 
         return true;
 

@@ -12,9 +12,6 @@ define(function(require, exports, module) {
     // Defining the modal (preview pop up)
     var modal = require('modules/modal/modal');
 
-    // Defining the helper methods
-    var eachModel = require('helper/eachModel');
-
     // Defining the events
     var eventSetup = require('modules/events/setup');
 

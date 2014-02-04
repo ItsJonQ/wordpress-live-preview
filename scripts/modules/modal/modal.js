@@ -196,6 +196,10 @@ define(function(require, exports, module) {
         return this;
     };
 
+    var modalCheckStatus = function() {
+        return exports.status;
+    };
+
     // Fn: Setting up the preview modal
     var init = function() {
         if(initStatus) {
@@ -213,6 +217,7 @@ define(function(require, exports, module) {
 
     exports = {
         add: addModal,
+        checkStatus: modalCheckStatus,
         Data: modalData,
         events: {
             activate: modalEventTriggerActivate,

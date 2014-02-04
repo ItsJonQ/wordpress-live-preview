@@ -25,7 +25,7 @@ define(function() {
                 success: function(data) {
 
                     // Console logging for debugging
-                    console.log(data.debug.post);
+                    // console.log(data.debug);
 
                     // Initializing the callback if defined, passing on the data
                     if(callback !== undefined && typeof callback === 'function') {

@@ -3,21 +3,15 @@
     'use strict';
 
     // Defining the config for RequireJS
-    var requireConfigInit = function() {
-        require.config({
-            packages: [
-                {
-                    name: 'underscore',
-                    location: 'vendor/',
-                    main: 'underscore'
-                }
-            ]
-        });
-        return true;
-    };
-
-    // Intializing the RequireJS config
-    requireConfigInit();
+    require.config({
+        packages: [
+            {
+                name: 'underscore',
+                location: 'vendor/',
+                main: 'underscore'
+            }
+        ]
+    });
 
     // Execute the modulated App after jQuery and Document is ready
     $(document).on('ready', function() {

@@ -1,5 +1,7 @@
 define(['api'], function(Api) {
 
+    'use strict';
+
     var eachModel;
 
     // Fn: Helper method to loop through each model

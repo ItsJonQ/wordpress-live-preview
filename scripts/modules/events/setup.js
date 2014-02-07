@@ -64,8 +64,10 @@ define([
                     previewClick.classList.add('button', 'button-small', 'hide-if-no-js');
                     previewClick.innerHTML = 'Live Preview';
 
+                    // TODO: Can't Use Post List Due to WP Underscore Conflict
+
                     // Creating the event trigger
-                    createEventTrigger.call(model, $actionRow, previewAction, previewClick);
+                    // createEventTrigger.call(model, $actionRow, previewAction, previewClick);
 
                 }
             });

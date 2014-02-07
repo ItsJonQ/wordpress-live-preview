@@ -12,11 +12,13 @@ define([
         // Looping through each model
         eachModel(function(model, i){
 
-            // Adding the click event to the model
-            model.events.preview.addEventListener('click', function(event) {
-                // Activating the render method
-                render(event, model);
-            }, false);
+            if(model.events) {
+                // Adding the click event to the model
+                model.events.preview.addEventListener('click', function(event) {
+                    // Activating the render method
+                    render(event, model);
+                }, false);
+            }
 
             // Adding the render method to the model
             model.override('render', function() {

@@ -23,6 +23,24 @@ function q_live_preview_templates() {
 // Fn: Registering and enqueing the plugin's styles
 function q_live_preview_scripts() {
 
+    // Adding Underscore
+    if (wp_script_is( 'underscore', 'enqueued' )) {
+        return;
+    } else {
+        wp_register_script( 'underscore', '//cdn.jsdelivr.net/underscorejs/1.6.0/underscore-min.js');
+        wp_enqueue_script( 'underscore' );
+    }
+
+
+    // Adding Backbone
+    if (wp_script_is( 'backbone', 'enqueued' )) {
+        return;
+    } else {
+        wp_register_script( 'backbone', '//cdn.jsdelivr.net/backbonejs/1.1.2/backbone-min.js');
+        wp_enqueue_script( 'backbone' );
+    }
+
+
     wp_register_style( 'q-live-preview-style-css', plugins_url('styles/main.css', __FILE__) );
 
     wp_register_style( 'q-live-preview-template-css', plugins_url('styles/template.css', __FILE__) );

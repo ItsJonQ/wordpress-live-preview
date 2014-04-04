@@ -115,9 +115,12 @@
     left: 0;
     bottom: 0;
     right: 0;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'Sans-Serif';
     -webkit-transform: translateZ(0);
     -moz-transform: translateZ(0);
     transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
 }
 
 .preview-modal-ui .label-container {

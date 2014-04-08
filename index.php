@@ -24,18 +24,14 @@ function q_live_preview_templates() {
 function q_live_preview_scripts() {
 
     // Adding Underscore
-    if (wp_script_is( 'underscore', 'enqueued' )) {
-        return;
-    } else {
+    if (!wp_script_is( 'underscore', 'enqueued' )) {
         wp_register_script( 'underscore', '//cdn.jsdelivr.net/underscorejs/1.6.0/underscore-min.js');
         wp_enqueue_script( 'underscore' );
     }
 
 
     // Adding Backbone
-    if (wp_script_is( 'backbone', 'enqueued' )) {
-        return;
-    } else {
+    if (!wp_script_is( 'backbone', 'enqueued' )) {
         wp_register_script( 'backbone', '//cdn.jsdelivr.net/backbonejs/1.1.2/backbone-min.js');
         wp_enqueue_script( 'backbone' );
     }

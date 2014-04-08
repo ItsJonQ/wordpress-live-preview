@@ -24,8 +24,10 @@ define(function(require, exports, module) {
         // Init model setup
         modelSetup();
 
-        // Init event setup
-        eventSetup.init();
+        if(!Api.check.postEdit()) {
+            // Init event setup
+            eventSetup.init();
+        }
 
         // Returning true
         return true;

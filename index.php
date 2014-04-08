@@ -47,7 +47,7 @@ function q_live_preview_scripts() {
     $root = plugins_url('/scripts/', __FILE__);
     // Defining the Require.js source
 
-    wp_enqueue_script( 'q-live-preview-script', plugins_url('build/live-preview.js', __FILE__), array('jquery'), '0.0.1', true );
+    wp_enqueue_script( 'q-live-preview-script', plugins_url('build/live-preview.js', __FILE__), array('jquery'), '0.0.2', true );
 
     // // Defining the script
     // $script = '<script data-main="'.$root.'main" type="text/javascript" src="'.$root.'require.js"></script>' . "\n";
